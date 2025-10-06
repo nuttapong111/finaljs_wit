@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+# 💪 Fitness & Workout Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+แอปพลิเคชันวางแผนออกกำลังกายที่ครบครันและทันสมัย พัฒนาด้วย React.js และ Hero UI Theme
 
-## Available Scripts
+## ✨ ฟีเจอร์หลัก
 
-In the project directory, you can run:
+###  วางแผนออกกำลังกาย
+- สร้างโปรแกรมออกกำลังกายที่เหมาะกับคุณ
+- เลือกท่าออกกำลังกายจากคลังข้อมูล
+- กำหนดจำนวนเซ็ตและครั้ง
+- ตั้งค่าระดับความยาก (เริ่มต้น/ปานกลาง/ขั้นสูง)
+- กำหนดระยะเวลาออกกำลังกาย
 
-### `npm start`
+###  คลังท่าออกกำลังกาย
+- ค้นหาท่าออกกำลังกายตามชื่อหรือกลุ่มกล้ามเนื้อ
+- ดูคำแนะนำการทำท่าออกกำลังกาย
+- ดูวิดีโอสาธิต (เชื่อมต่อ YouTube)
+- ข้อมูลแคลอรี่ที่เผาผลาญต่อนาที
+- จำแนกตามอุปกรณ์ที่ใช้
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###  ติดตามความก้าวหน้า
+- บันทึกเซสชั่นออกกำลังกาย
+- ดูสถิติรายสัปดาห์และรายเดือน
+- ติดตามแคลอรี่ที่เผาผลาญ
+- ดูเวลาออกกำลังกายรวม
+- จัดการข้อมูลส่วนตัว
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###  คำนวณแคลอรี่
+- คำนวณ BMR (Basal Metabolic Rate)
+- คำนวณ TDEE (Total Daily Energy Expenditure)
+- คำนวณ BMI (Body Mass Index)
+- แนะนำแคลอรี่เป้าหมายตามเป้าหมาย
+- แนะนำสารอาหารหลัก (โปรตีน/คาร์บ/ไขมัน)
 
-### `npm test`
+##  เทคโนโลยีที่ใช้
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React.js 18
+- **Routing**: React Router DOM
+- **Icons**: Heroicons
+- **Styling**: CSS3 with Custom Properties
+- **State Management**: React Context API
+- **Data Persistence**: LocalStorage
 
-### `npm run build`
+## 🚀 การติดตั้งและรัน
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ข้อกำหนดระบบ
+- Node.js 14.0 หรือใหม่กว่า
+- npm 6.0 หรือใหม่กว่า
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ขั้นตอนการติดตั้ง
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone repository**
+   ```bash
+   git clone <repository-url>
+   cd fitness-workout-planner
+   ```
 
-### `npm run eject`
+2. **ติดตั้ง dependencies**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **รันแอปพลิเคชัน**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **เปิดเบราว์เซอร์**
+   - ไปที่ `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### การ Build สำหรับ Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+ไฟล์ที่ build จะอยู่ในโฟลเดอร์ `build/`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### การ Deploy ไปยัง Railway
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **เตรียมโค้ดใน GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: Fitness Planner App"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/fitness-workout-planner.git
+   git push -u origin main
+   ```
 
-### Code Splitting
+2. **Deploy บน Railway**
+   - ไปที่ https://railway.app
+   - เข้าสู่ระบบด้วย GitHub
+   - คลิก "New Project" > "Deploy from GitHub repo"
+   - เลือก repository: `fitness-workout-planner`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **ตั้งค่า Environment Variables**
+   ```
+   NODE_ENV=production
+   GENERATE_SOURCEMAP=false
+   ```
 
-### Analyzing the Bundle Size
+4. **ตรวจสอบการ Deploy**
+   - ดู URL ในแท็บ "Settings" > "Domains"
+   - ตรวจสอบ logs ในแท็บ "Deployments"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ดูคู่มือการ deploy แบบละเอียดใน [DEPLOYMENT.md](./DEPLOYMENT.md)
 
-### Making a Progressive Web App
+## 📱 วิธีใช้งาน
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 1. หน้าแรก
+- ดูภาพรวมของแอปพลิเคชัน
+- ดูสถิติความก้าวหน้าล่าสุด
+- เข้าถึงฟีเจอร์หลักต่างๆ
 
-### Advanced Configuration
+### 2. วางแผนออกกำลังกาย
+- คลิก "สร้างโปรแกรมใหม่"
+- กรอกข้อมูลโปรแกรม (ชื่อ, คำอธิบาย, ระยะเวลา)
+- เลือกท่าออกกำลังกายและกำหนดเซ็ต/ครั้ง
+- บันทึกโปรแกรม
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 3. คลังท่าออกกำลังกาย
+- ค้นหาท่าออกกำลังกายด้วยคำค้นหา
+- กรองตามกลุ่มกล้ามเนื้อ
+- คลิกดูรายละเอียดและวิดีโอสาธิต
 
-### Deployment
+### 4. ติดตามความก้าวหน้า
+- บันทึกเซสชั่นออกกำลังกาย
+- ดูสถิติรายสัปดาห์และรายเดือน
+- แก้ไขข้อมูลส่วนตัว
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 5. คำนวณแคลอรี่
+- กรอกข้อมูลส่วนตัว
+- เลือกระดับกิจกรรมและเป้าหมาย
+- ดูผลการคำนวณแคลอรี่และสารอาหาร
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📊 ข้อมูลตัวอย่าง
+
+แอปพลิเคชันมาพร้อมกับข้อมูลท่าออกกำลังกายตัวอย่าง:
+- Push-ups (หน้าอก)
+- Squats (ขา)
+- Plank (แกนกลาง)
+- Pull-ups (หลัง)
+- Lunges (ขา)
+- Burpees (ทั้งตัว)
+
+## 🔧 การพัฒนาต่อ
+
+### โครงสร้างไฟล์
+```
+src/
+├── components/          # React Components
+│   ├── Header.js
+│   ├── Home.js
+│   ├── WorkoutPlanner.js
+│   ├── ExerciseLibrary.js
+│   ├── ProgressTracker.js
+│   └── CalorieCalculator.js
+├── contexts/           # Context Providers
+│   ├── WorkoutContext.js
+│   └── ProgressContext.js
+├── hooks/             # Custom Hooks
+├── utils/             # Utility Functions
+├── data/              # Static Data
+├── App.js
+├── App.css
+└── index.js
+```
+
+### การเพิ่มฟีเจอร์ใหม่
+1. สร้าง Component ใหม่ใน `src/components/`
+2. เพิ่ม Route ใน `App.js`
+3. อัปเดต Context หากจำเป็น
+4. เพิ่ม Navigation link ใน `Header.js`
+

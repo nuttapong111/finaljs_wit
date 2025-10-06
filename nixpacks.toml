@@ -1,8 +1,9 @@
 [phases.setup]
-nixPkgs = ['nodejs', 'npm']
+# ใช้เพียง nodejs; npm มาพร้อมกับ node อยู่แล้วใน Nix
+nixPkgs = ['nodejs']
 
 [phases.install]
-cmds = ['npm ci']
+cmds = ['npm ci --no-audit --no-fund']
 
 [phases.build]
 cmds = ['npm run build']
